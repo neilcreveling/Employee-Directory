@@ -4,7 +4,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 const Filter = (props) => {
 
     const handleFilter = () => {
-        props.filterEmployees( 'sales' )
+        props.filterEmployees()
         console.log('hello filter');
     }
 

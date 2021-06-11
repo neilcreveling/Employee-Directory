@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
-import API from './components/utils/API';
-import Employee from './components/Employee';
-import Wrapper from './components/Wrapper';
+import API from './utils/API';
 import Filter from './components/Filter';
 import Sort from './components/Sort';
+import Table from "react-bootstrap/Table";
+import Title from './components/Title';
 
 class App extends React.Component {
   state = {
