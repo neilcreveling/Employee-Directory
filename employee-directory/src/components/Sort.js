@@ -1,26 +1,26 @@
-import React from "react";
-import "./style.css";
+//import React from "react";
+//import "./style.css";
 
-import Dropdown from "react-bootstrap/Dropdown";
+//import Dropdown from "react-bootstrap/Dropdown";
 
-const Sort = (props) => {
+//const Sort = (props) => {
 
-    const handleFirstName = () => {
-        props.sortEmployeesByFirstName()
-        console.log("Sorted by First Name");
-    }
+    //const handleFirstName = () => {
+        //props.sortEmployeesByFirstName()
+        //console.log("Sorted by First Name");
+    //}
 
-    const handleLastName = () => {
-        props.sortEmployeesByLastName()
-        console.log("Sorted by Last Name")
-    }
+    //const handleLastName = () => {
+        //props.sortEmployeesByLastName()
+        //console.log("Sorted by Last Name")
+    //}
 
-    return (
-        <div className='sort-div'>
+    //return (
+        //<div className='sort-div'>
 
-        </div>
-    )
+        //</div>
+    //)
 
-};
+//};
 
 export default Sort;

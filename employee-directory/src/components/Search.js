@@ -1,16 +1,18 @@
-import React from "react";
-import "./style.css";
+//import React from "react";
+//import "./style.css";
 
-const Search = (props) => {
+//const 
 
-    const handleEmployeeSearch = (props) => {
-        props.searchEmployees()
-        console.log('Searched Employees');
-    }
-}
+//const Search = (props) => {
 
-return (
+    //const handleEmployeeSearch = (props) => {
+        //props.searchEmployees()
+        //console.log('Searched Employees');
+    //}
+//}
 
-)
+//return (
 
-export default Search;
+//)
+
+//export default Search;
