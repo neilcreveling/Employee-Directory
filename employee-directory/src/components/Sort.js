@@ -1,26 +1,49 @@
-//import React from "react";
-//import "./style.css";
+import React from "react";
+import "./style.css";
 
-//import Dropdown from "react-bootstrap/Dropdown";
+import Dropdown from "react-bootstrap/Dropdown";
 
-//const Sort = (props) => {
+const Sort = (props) => {
 
-    //const handleFirstName = () => {
-        //props.sortEmployeesByFirstName()
-        //console.log("Sorted by First Name");
-    //}
+    const handleSortFirstNameAz = () => {
+        props.sortEmployeesByFirstNameAz()
+        console.log("Sorted by First Name - A to Z");
+    }
 
-    //const handleLastName = () => {
-        //props.sortEmployeesByLastName()
-        //console.log("Sorted by Last Name")
-    //}
+    const handleSortFirstNameZa = () => {
+        props.sortEmployeesByFirstNameZa()
+        console.log("Sorted by First Name - Z to A");
+    }
 
-    //return (
-        //<div className='sort-div'>
+    const handleSortLastNameAz = () => {
+        props.sortEmployeesByLastNameAz()
+        console.log("Sorted by Last Name - A to Z")
+    }
 
-        //</div>
-    //)
+    const handleSortLastNameZa = () => {
+        props.sortEmployeesByLastNameAz()
+        console.log("Sorted by Last Name- Z to A")
+    }
 
-//};
+    return (
+        <div className='sort-div'>
+            <div className='mb-2 d-flex flex-row'>
+                <Dropdown>
+                    <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                        Sort
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item as='button' onClick={ handleSortFirstNameAz }>First Name: A-Z</Dropdown.Item>
+                        <Dropdown.Item as='button' onClick={ handleSortFirstNameZa }>First Name: Z-A</Dropdown.Item>
+                        <Dropdown.Item as='button' onClick={ handleSortLastNameAz }>Last Name: A-Z</Dropdown.Item>
+                        <Dropdown.Item as='button' onClick={ handleSortLastNameZa }>Last Name: Z-A</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            </div>
+        </div>
+    )
+
+};
 
 export default Sort;
