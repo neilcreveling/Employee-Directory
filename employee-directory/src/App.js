@@ -22,8 +22,23 @@ class App extends React.Component {
     .catch(err => console.log(err));
   }
 
-  filterEmployees = () => {
+  filterAgeEmployees = () => {
     const employees = this.state.employees.filter( employee => employee.dob.age < 50);
+    this.setState({ employees });
+  }
+
+    filterNatUSEmployees = () => {
+    const employees = this.state.employees.filter( employee => employee.nat === "US");
+    this.setState({ employees });
+  }
+
+      filterNatGBEmployees = () => {
+    const employees = this.state.employees.filter( employee => employee.nat === "GB");
+    this.setState({ employees });
+  }
+
+      filterNatFREmployees = () => {
+    const employees = this.state.employees.filter( employee => employee.nat === "FR");
     this.setState({ employees });
   }
 
@@ -54,6 +69,7 @@ class App extends React.Component {
         <th>{employee.location.city}</th>
         <th>{employee.dob.date}</th>
         <th>{employee.dob.age}</th>
+        <th>{employee.nat}</th>
       </tr>
     ))
   }
@@ -65,7 +81,10 @@ class App extends React.Component {
           <Title>Employee Directory</Title>
           <nav className='d-flex align-items-baseline'>
             <Filter
-              filterEmployees={this.filterEmployees}
+              filterAgeEmployees={this.filterEmployees}
+              filterNatUSEmployees={this.filterNatUSEmployees}
+              filterNatGBEmployees={this.filterNatGBEmployees}
+              filterNatFREmployees={this.filterNatFREmployees}
               resetFilter={this.resetFilter}
             />
           </nav>

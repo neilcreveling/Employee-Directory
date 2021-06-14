@@ -3,9 +3,24 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 const Filter = (props) => {
 
-    const handleFilter = () => {
-        props.filterEmployees()
+    const handleAgeFilter = () => {
+        props.filterAgeEmployees()
         console.log('hello filter');
+    }
+
+    const handleUSFilter = () => {
+        props.filterNatUSEmployees()
+        console.log('US Employees');
+    }
+
+        const handleGBFilter = () => {
+        props.filterNatGBEmployees()
+        console.log('GB Employees');
+    }
+
+        const handleFRFilter = () => {
+        props.filterNatFREmployees()
+        console.log('FR Employees');
     }
 
     const handleReset = () => {
@@ -21,7 +36,10 @@ const Filter = (props) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item as='button' onClick={ handleFilter }>Filter Under 50</Dropdown.Item>
+                    <Dropdown.Item as='button' onClick={ handleAgeFilter }>Filter Under 50</Dropdown.Item>
+                    <Dropdown.Item as='button' onClick={ handleUSFilter }>Show American Employees</Dropdown.Item>
+                    <Dropdown.Item as='button' onClick={ handleGBFilter }>Show British Employees</Dropdown.Item>
+                    <Dropdown.Item as='button' onClick={ handleFRFilter }>Show French Employees</Dropdown.Item>
                     <Dropdown.Item as='button' onClick={ handleReset }>Clear Filters</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

@@ -22,6 +22,10 @@ function EmployeeCard(props) {
             <strong>Age: </strong> 
             {props.age}
           </li>
+          <li>
+            <strong>Nationality: </strong> 
+            {props.nat}
+          </li>
         </ul>
       </div>
     </div>
