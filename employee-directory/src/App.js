@@ -81,7 +81,7 @@ class App extends React.Component {
           <Title>Employee Directory</Title>
           <nav className='d-flex align-items-baseline'>
             <Filter
-              filterAgeEmployees={this.filterEmployees}
+              filterAgeEmployees={this.filterAgeEmployees}
               filterNatUSEmployees={this.filterNatUSEmployees}
               filterNatGBEmployees={this.filterNatGBEmployees}
               filterNatFREmployees={this.filterNatFREmployees}

@@ -16,15 +16,11 @@ function EmployeeCard(props) {
           </li>
           <li>
             <strong>Location: </strong> 
-            {props.city}, {props.state}
+            {props.city}, {props.nat}
           </li>
           <li>
             <strong>Age: </strong> 
             {props.age}
-          </li>
-          <li>
-            <strong>Nationality: </strong> 
-            {props.nat}
           </li>
         </ul>
       </div>
