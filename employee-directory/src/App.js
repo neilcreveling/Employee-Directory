@@ -10,8 +10,8 @@ class App extends React.Component {
   state = {
     error: '',
     employees: [],
-    search: ''
   };
+
 
   componentDidMount() {
     API.getEmployees()
@@ -40,6 +40,10 @@ class App extends React.Component {
       filterNatFREmployees = () => {
     const employees = this.state.employees.filter( employee => employee.nat === "FR");
     this.setState({ employees });
+  }
+
+  resetFilter = () => {
+    this.setState(this.baseState);
   }
 
   sortEmployeesByFirstNameAz = () => {
@@ -85,7 +89,6 @@ class App extends React.Component {
               filterNatUSEmployees={this.filterNatUSEmployees}
               filterNatGBEmployees={this.filterNatGBEmployees}
               filterNatFREmployees={this.filterNatFREmployees}
-              resetFilter={this.resetFilter}
             />
           </nav>
         </header>
@@ -104,6 +107,7 @@ class App extends React.Component {
               <th>Location</th>
               <th>DOB</th>
               <th>Age</th>
+              <th>Nationality</th>
             </tr>
           </thead>
           <tbody>

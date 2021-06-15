@@ -5,7 +5,7 @@ const Filter = (props) => {
 
     const handleAgeFilter = () => {
         props.filterAgeEmployees()
-        console.log('hello filter');
+        console.log('Age Filter');
     }
 
     const handleUSFilter = () => {
@@ -23,11 +23,6 @@ const Filter = (props) => {
         console.log('FR Employees');
     }
 
-    const handleReset = () => {
-        props.resetFilter()
-        console.log('hello reset');
-    }
-
     return (
         <div className='mb-3 mr-2 d-flex flex-row'>
             <Dropdown>
@@ -40,7 +35,6 @@ const Filter = (props) => {
                     <Dropdown.Item as='button' onClick={ handleUSFilter }>Show American Employees</Dropdown.Item>
                     <Dropdown.Item as='button' onClick={ handleGBFilter }>Show British Employees</Dropdown.Item>
                     <Dropdown.Item as='button' onClick={ handleFRFilter }>Show French Employees</Dropdown.Item>
-                    <Dropdown.Item as='button' onClick={ handleReset }>Clear Filters</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
